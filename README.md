@@ -45,7 +45,7 @@ Tom ruta betyder att implementeringen inte är påbörjad.
 |G        |  ✅  |
 |H        |  ✅  |
 
-Nedanstående görs efter inlämning för träning/nöje. Vänligen se [Examinationsbeskrivningen] (https://docs.google.com/document/d/1WAqwazQ5vAFimcSKLhtRzVvIsQtsdyLqiJiedMs5WKg/edit?tab=t.0)
+Nedanstående görs efter inlämning för träning/nöje. Vänligen se [Examinationsbeskrivningen](https://docs.google.com/document/d/1WAqwazQ5vAFimcSKLhtRzVvIsQtsdyLqiJiedMs5WKg/edit?tab=t.0)
 för mer detaljer kring vad varje version och bokstav innefattar.
 
 |Version 2|Status|
