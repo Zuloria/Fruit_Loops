@@ -1,5 +1,7 @@
+
+
 class Player:
-    marker = "@"
+    marker = "♠"
 
     def __init__(self, x, y):
         self.pos_x = x
@@ -13,8 +15,12 @@ class Player:
         self.pos_x += dx
         self.pos_y += dy
 
+    # Fu
     def can_move(self, x, y, grid):
-        return True
-        #TODO: returnera True om det inte står något i vägen
+        if grid.get(self.pos_x + x, self.pos_y + y) != grid.wall:
+            return True
+        else:
+            return False
+        
 
 

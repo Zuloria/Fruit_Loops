@@ -36,7 +36,7 @@ class Grid:
             row = self.data[y]
             for x in range(len(row)):
                 if x == self.player.pos_x and y == self.player.pos_y:
-                    xs += "@"
+                    xs += "♠"
                 else:
                     xs += str(row[x])
             xs += "\n"
@@ -45,11 +45,11 @@ class Grid:
 
     def make_walls(self):
         """Skapa väggar runt hela spelplanen"""
-        for i in range(self.height):
+        for i in range(self.height): # Höger och vänster vägg
             self.set(0, i, self.wall)
             self.set(self.width - 1, i, self.wall)
 
-        for j in range(1, self.width - 1):
+        for j in range(1, self.width - 1): # Tak och botten vägg
             self.set(j, 0, self.wall)
             self.set(j, self.height - 1, self.wall)
 
@@ -63,8 +63,22 @@ class Grid:
         """Slumpa en y-position på spelplanen"""
         return random.randint(0, self.height-1)
 
-
     def is_empty(self, x, y):
         """Returnerar True om det inte finns något på aktuell ruta"""
         return self.get(x, y) == self.empty
+    
+    def random_walls_x(self):
+        x = random.randint(1, self.width-4)
+        y = random.randint(1, self.height-4)
+        for i in range(0, 3):
+            if self.is_empty(x + i, y):
+                self.set(x + i, y, self.wall)
+         
+    def random_walls_y(self):
+        x = random.randint(1, self.width-4)
+        y = random.randint(1, self.height-4)
+        for i in range(0, 3):
+            if self.is_empty(x, y + i):
+                self.set(x, y + i, self.wall)
+
 
